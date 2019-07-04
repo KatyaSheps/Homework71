@@ -16,6 +16,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MorningActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SYNC"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="morning"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".EveningActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SYNC"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="evening"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".AfternoonActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SYNC"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="afternoon"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
