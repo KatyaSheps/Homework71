@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void synchronization(View view) {
         Intent intent = new Intent(Intent.ACTION_SYNC);
-         String timeStamp = new SimpleDateFormat("HH:mm").format(Calendar.getInstance().getTime());
-         Toast.makeText(this, timeStamp, Toast.LENGTH_LONG).show();
+        // String timeStamp = new SimpleDateFormat("HH:mm").format(Calendar.getInstance().getTime());
+        // Toast.makeText(this, timeStamp, Toast.LENGTH_LONG).show();
 
         int hours = Calendar.getInstance().getTime().getHours();
         if(hours >= 6 && hours < 14) {
