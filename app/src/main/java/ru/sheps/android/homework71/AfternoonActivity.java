@@ -8,7 +8,7 @@ public class AfternoonActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_morning);
+        setContentView(R.layout.activity_afternoon);
         Toast.makeText(this, "Добрый день!", Toast.LENGTH_LONG).show();
 
     }

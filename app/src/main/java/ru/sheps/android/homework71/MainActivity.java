@@ -15,6 +15,10 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
    Button btnSynchronization;
+    private static final int MORNING_START_TIME_HOUR = 6;
+    private static final int AFTERNOON_START_TIME_HOUR = 14;
+    private static final int EVENING_START_TIME_HOUR = 15;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
         // Toast.makeText(this, timeStamp, Toast.LENGTH_LONG).show();
 
         int hours = Calendar.getInstance().getTime().getHours();
-        if(hours >= 6 && hours < 14) {
+        if(hours >= MORNING_START_TIME_HOUR && hours < AFTERNOON_START_TIME_HOUR) {
             intent.setData(Uri.parse("http://morning"));
         }
-        if(hours >= 14 && hours < 15) {
+        if(hours >= AFTERNOON_START_TIME_HOUR && hours < EVENING_START_TIME_HOUR) {
             intent.setData(Uri.parse("http://afterboon"));
         }
-        if(hours >= 15 || hours < 6) {
+        if(hours >= EVENING_START_TIME_HOUR || hours < MORNING_START_TIME_HOUR) {
             intent.setData(Uri.parse("http://evening"));
         }
 
